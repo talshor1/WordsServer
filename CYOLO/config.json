@@ -1,0 +1,11 @@
+{
+  "server": {
+    "address": "127.0.0.1",
+    "port": "8080"
+  },
+
+  "limiter": {
+    "allowed_per_sec": 2,
+    "allowed_per_min": 10
+  }
+}
