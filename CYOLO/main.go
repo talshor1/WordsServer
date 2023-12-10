@@ -33,6 +33,7 @@ func main() {
 		err := <-errChan
 		if err != nil {
 			log.Printf("Consumer got un expected error, starting a new one")
+			wg.Add(1)
 			c = consumer.NewConsumer(q, dh, errChan, &wg)
 			go c.StartConsuming()
 		}
